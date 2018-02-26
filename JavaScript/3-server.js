@@ -39,3 +39,5 @@ http.createServer((req, res) => {
   if (data) res.end(data);
   else res.end('File ' + url + 'not found');
 }).listen(8000);
+
+// See https://github.com/HowProgrammingWorks/LiveReload
