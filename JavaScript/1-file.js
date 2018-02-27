@@ -21,6 +21,6 @@ const watch = (path) => {
   });
 };
 
-const path = './1-watch-file.js';
+const path = './1-file.js';
 load(path);
 watch(path);
