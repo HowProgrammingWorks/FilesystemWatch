@@ -6,7 +6,7 @@ const http = require('http');
 const cache = new Map();
 
 const cacheFile = (path) => {
-  fs.readFile(path, (err, data) => {
+  fs.readFile(path, 'utf8', (err, data) => {
     if (err) {
       cache.delete(path);
       return;
