@@ -4,7 +4,7 @@ const fs = require('fs');
 
 const changes = [];
 
-const display = (files) => {
+const display = files => {
   console.log('\x1Bc');
   while (changes.length > 10) {
     changes.shift();
@@ -19,14 +19,14 @@ const display = (files) => {
   }
 };
 
-const ls = (path) => {
+const ls = path => {
   fs.readdir(path, (err, files) => {
     if (err) return;
     display(files);
   });
 };
 
-const watch = (path) => {
+const watch = path => {
   fs.watch(path, (event, file) => {
     console.log('\x1Bc');
     changes.push({ date: new Date(), event, file });

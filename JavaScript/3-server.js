@@ -5,7 +5,7 @@ const http = require('http');
 
 const cache = new Map();
 
-const cacheFile = (path) => {
+const cacheFile = path => {
   fs.readFile(path, 'utf8', (err, data) => {
     if (err) {
       cache.delete(path);
@@ -15,14 +15,14 @@ const cacheFile = (path) => {
   });
 };
 
-const cacheFolder = (path) => {
+const cacheFolder = path => {
   fs.readdir(path, (err, files) => {
     if (err) return;
     files.forEach(cacheFile);
   });
 };
 
-const watch = (path) => {
+const watch = path => {
   fs.watch(path, (event, file) => {
     cacheFile(file);
   });
