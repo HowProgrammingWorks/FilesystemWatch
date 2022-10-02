@@ -1,7 +1,7 @@
 'use strict';
 
-const fs = require('fs');
-const http = require('http');
+const fs = require('node:fs');
+const http = require('node:http');
 
 const cache = new Map();
 
