@@ -32,12 +32,14 @@ const path = './';
 cacheFolder(path);
 watch(path);
 
-http.createServer((req, res) => {
-  const url = req.url.substring(1);
-  console.log(url);
-  const data = cache.get(url);
-  if (data) res.end(data);
-  else res.end('File ' + url + 'not found');
-}).listen(8000);
+http
+  .createServer((req, res) => {
+    const url = req.url.substring(1);
+    console.log(url);
+    const data = cache.get(url);
+    if (data) res.end(data);
+    else res.end('File ' + url + 'not found');
+  })
+  .listen(8000);
 
 // See https://github.com/HowProgrammingWorks/LiveReload
