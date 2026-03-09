@@ -1,0 +1,2 @@
+Edit any file in "./5-data" to trigger restart
+  > Only this path is watched
