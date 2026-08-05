@@ -9,7 +9,7 @@ const load = (path) => {
     if (err) throw err;
     content = data;
     console.log('\x1Bc');
-    console.log('Length: ' + content.length);
+    console.log(`Length: ${content.length}`);
     console.log(content);
   });
 };

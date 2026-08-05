@@ -38,7 +38,7 @@ http
     console.log(url);
     const data = cache.get(url);
     if (data) res.end(data);
-    else res.end('File ' + url + 'not found');
+    else res.end(`File ${url} not found`);
   })
   .listen(8000);
 
