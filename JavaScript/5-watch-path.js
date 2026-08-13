@@ -1,6 +1,6 @@
 'use strict';
 
-const fs = require('fs');
+const fs = require('node:fs');
 
 const dataPath = './5-data/greeting.txt';
 const greeting = fs.readFileSync(dataPath, 'utf8').trim();
